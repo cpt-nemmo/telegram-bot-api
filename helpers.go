@@ -14,10 +14,11 @@ import (
 // NewMessage creates a new Message.
 //
 // chatID is where to send it, text is the message text.
-func NewMessage(chatID int64, text string) MessageConfig {
+func NewMessage(chatID int64, threadID int, text string) MessageConfig {
 	return MessageConfig{
 		BaseChat: BaseChat{
 			ChatID:           chatID,
+			MessageThreadID:  threadID,
 			ReplyToMessageID: 0,
 		},
 		Text:                  text,
