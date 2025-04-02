@@ -1,3 +1,3 @@
-module test-telegram-bot-api-lib/telegram-bot-api
+module github.com/cpt-nemmo/telegram-bot-api
 
 go 1.24.1
