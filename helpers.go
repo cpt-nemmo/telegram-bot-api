@@ -78,10 +78,10 @@ func NewCopyMessage(chatID int64, fromChatID int64, messageID int) CopyMessageCo
 // FileReader, or FileBytes.
 //
 // Note that you must send animated GIFs as a document.
-func NewPhoto(chatID int64, file RequestFileData) PhotoConfig {
+func NewPhoto(chatID int64, messageThreadID int, file RequestFileData) PhotoConfig {
 	return PhotoConfig{
 		BaseFile: BaseFile{
-			BaseChat: BaseChat{ChatID: chatID},
+			BaseChat: BaseChat{ChatID: chatID, MessageThreadID: messageThreadID},
 			File:     file,
 		},
 	}
