@@ -81,7 +81,7 @@ func NewCopyMessage(chatID int64, fromChatID int64, messageID int) CopyMessageCo
 func NewPhoto(chatID int64, messageThreadID int, file RequestFileData) PhotoConfig {
 	return PhotoConfig{
 		BaseFile: BaseFile{
-			BaseChat: BaseChat{ChatID: chatID, MessageThreadID: messageThreadID},
+			BaseChat: BaseChat{ChatID: chatID, MessageThreadID: messageThreadID}, // add threadID
 			File:     file,
 		},
 	}
